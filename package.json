@@ -1,0 +1,23 @@
+{
+  "name": "cinema-vfall-vue",
+  "version": "1.0.0",
+  "description": "My best Nuxt.js project",
+  "author": "Alexey Kopievskiy",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.9.7",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
