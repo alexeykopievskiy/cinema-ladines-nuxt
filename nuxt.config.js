@@ -7,11 +7,11 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'V-fall - лучшие фильмы в формате HD',
+    title: 'ladines - лучшие фильмы в формате HD',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'V-fall - лучшие фильмы в формате HD' }
+      { hid: 'description', name: 'description', content: 'ladines - лучшие фильмы в формате HD' }
     ],
     script: [
       { src: 'https://code.jquery.com/jquery-3.4.1.min.js' },

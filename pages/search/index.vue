@@ -1,29 +1,29 @@
 <template>
-  <main class="v-fall-main v-fall-main--page-list">
-    <div class="v-fall__container v-fall__container--white v-fall__container--list">
-      <section class="v-fall-main-block grid grid-column">
-        <h2 class="v-fall-main-block__header">{{title}}</h2>
-        <div class="v-fall-main-block__container grid grid-wrap" v-if="videos">
+  <main class="ladines-main ladines-main--page-list">
+    <div class="ladines__container ladines__container--white ladines__container--list">
+      <section class="ladines-main-block grid grid-column">
+        <h2 class="ladines-main-block__header">{{title}}</h2>
+        <div class="ladines-main-block__container grid grid-wrap" v-if="videos">
           <a
             @click.prevent="openVideo(video.url)"
             v-for="video in videos"
             :key="video.id"
-            class="v-fall-main-block__item"
+            class="ladines-main-block__item"
             href="#"
           >
-            <div class="v-fall-main-block__parent">
-              <img class="v-fall-main-block__img" :src="video.image" alt />
+            <div class="ladines-main-block__parent">
+              <img class="ladines-main-block__img" :src="video.image" alt />
             </div>
-            <h3 class="v-fall-main-block__title">{{video.title}}</h3>
-            <p class="v-fall-main-block__content">
-              <span class="v-fall-main-block__elem">{{video.year}}</span>
-              <span class="v-fall-main-block__elem" v-if="video.category">{{video.category[0]}}</span>
+            <h3 class="ladines-main-block__title">{{video.title}}</h3>
+            <p class="ladines-main-block__content">
+              <span class="ladines-main-block__elem">{{video.year}}</span>
+              <span class="ladines-main-block__elem" v-if="video.category">{{video.category[0]}}</span>
             </p>
           </a>
         </div>
         <button
           v-if="loadBtn"
-          class="v-fall-main-block__btn btn btn-default"
+          class="ladines-main-block__btn btn btn-default"
           @click="loadMore()"
           type="button"
         >Загрузить еще</button>
@@ -96,7 +96,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "V-fall - лучшие фильмы в формате HD"
+          content: "ladines - лучшие фильмы в формате HD"
         }
       ]
     };

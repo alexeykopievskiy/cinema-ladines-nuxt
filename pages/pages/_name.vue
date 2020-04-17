@@ -1,9 +1,9 @@
 <template>
-  <main class="v-fall-main">
-    <div class="v-fall__container grid grid-column v-fall__container--contacts">
-      <section class="v-fall__container--white v-fall-contacts__block">
-        <h2 class="v-fall-contacts__header">{{name}}</h2>
-        <div class="v-fall-contacts__content" v-html="content"></div>
+  <main class="ladines-main">
+    <div class="ladines__container grid grid-column ladines__container--contacts">
+      <section class="ladines__container--white ladines-contacts__block">
+        <h2 class="ladines-contacts__header">{{name}}</h2>
+        <div class="ladines-contacts__content" v-html="content"></div>
       </section>
     </div>
   </main>
@@ -24,7 +24,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "V-fall - лучшие фильмы в формате HD"
+          content: "ladines - лучшие фильмы в формате HD"
         }
       ]
     };

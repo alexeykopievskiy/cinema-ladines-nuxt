@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-.v-fall-header__search:before {
+.ladines-header__search:before {
   content: url("~../assets/img/search.png");
   width: 16px;
   height: 16px;

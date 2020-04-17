@@ -1,112 +1,112 @@
 <template>
-  <main class="v-fall-main">
-    <section class="v-fall-main-slider owl-carousel" v-if="posters">
+  <main class="ladines-main">
+    <section class="ladines-main-slider owl-carousel" v-if="posters">
       <div
         @click="openVideo(item.url)"
         v-for="item in posters"
         :key="item.id"
-        class="v-fall-main-slide"
+        class="ladines-main-slide"
       >
         <img :src="item.image" alt />
-        <div class="v-fall-main-slide__content">
-          <p class="v-fall-main-slide__label">
-            <span class="v-fall-main-slide__text">{{item.year}}</span>
-            <span class="v-fall-main-slide__text">{{item.category.join(', ')}}</span>
+        <div class="ladines-main-slide__content">
+          <p class="ladines-main-slide__label">
+            <span class="ladines-main-slide__text">{{item.year}}</span>
+            <span class="ladines-main-slide__text">{{item.category.join(', ')}}</span>
           </p>
-          <h3 class="v-fall-main-slide__title">{{item.title}}</h3>
+          <h3 class="ladines-main-slide__title">{{item.title}}</h3>
         </div>
       </div>
     </section>
-    <div class="v-fall-main-slide__controls">
-      <button class="v-fall-main-slide__prev"></button>
-      <button class="v-fall-main-slide__next"></button>
+    <div class="ladines-main-slide__controls">
+      <button class="ladines-main-slide__prev"></button>
+      <button class="ladines-main-slide__next"></button>
     </div>
-    <div class="v-fall__container v-fall__container--white v-fall__container--main">
-      <section class="v-fall-main-block">
-        <h2 class="v-fall-main-block__header">Фильмы</h2>
+    <div class="ladines__container ladines__container--white ladines__container--main">
+      <section class="ladines-main-block">
+        <h2 class="ladines-main-block__header">Фильмы</h2>
         <div
-          class="v-fall-main-block__container v-fall-main-block__container-carousel--default owl-carousel"
+          class="ladines-main-block__container ladines-main-block__container-carousel--default owl-carousel"
           v-if="films"
         >
           <a
             @click.prevent="openVideo(item.url)"
             v-for="item in films"
             :key="item.id"
-            class="v-fall-main-block__item"
+            class="ladines-main-block__item"
             href="#"
           >
-            <img class="v-fall-main-block__img" :src="item.image" alt />
-            <h3 class="v-fall-main-block__title">{{item.title}}</h3>
-            <p class="v-fall-main-block__content">
-              <span class="v-fall-main-block__elem">{{item.year}}</span>
-              <span class="v-fall-main-block__elem">{{item.category.join(', ')}}</span>
+            <img class="ladines-main-block__img" :src="item.image" alt />
+            <h3 class="ladines-main-block__title">{{item.title}}</h3>
+            <p class="ladines-main-block__content">
+              <span class="ladines-main-block__elem">{{item.year}}</span>
+              <span class="ladines-main-block__elem">{{item.category.join(', ')}}</span>
             </p>
           </a>
         </div>
       </section>
-      <section class="v-fall-main-block v-fall-main-block__carousel">
-        <h2 class="v-fall-main-block__header">РЕКОМЕНДУЕМ ПОСМОТРЕТЬ</h2>
+      <section class="ladines-main-block ladines-main-block__carousel">
+        <h2 class="ladines-main-block__header">РЕКОМЕНДУЕМ ПОСМОТРЕТЬ</h2>
         <div
-          class="v-fall-main-block__container v-fall-main-block__container-carousel owl-carousel"
+          class="ladines-main-block__container ladines-main-block__container-carousel owl-carousel"
         >
           <a
             @click.prevent="openVideo(item.url)"
             v-for="item in recommendations"
             :key="item.id"
-            class="v-fall-main-block__item v-fall-main-block__item--lg"
+            class="ladines-main-block__item ladines-main-block__item--lg"
             href="#"
           >
-            <img class="v-fall-main-block__img" :src="item.image" alt />
-            <h3 class="v-fall-main-block__title">{{item.title}}</h3>
-            <p class="v-fall-main-block__content">
-              <span class="v-fall-main-block__elem">{{item.year}}</span>
-              <span class="v-fall-main-block__elem">{{item.category.join(', ')}}</span>
+            <img class="ladines-main-block__img" :src="item.image" alt />
+            <h3 class="ladines-main-block__title">{{item.title}}</h3>
+            <p class="ladines-main-block__content">
+              <span class="ladines-main-block__elem">{{item.year}}</span>
+              <span class="ladines-main-block__elem">{{item.category.join(', ')}}</span>
             </p>
           </a>
         </div>
-        <div class="v-fall-main-block__carousel-btn">
-          <button class="v-fall-main-block__carousel-left"></button>
-          <button class="v-fall-main-block__carousel-right"></button>
+        <div class="ladines-main-block__carousel-btn">
+          <button class="ladines-main-block__carousel-left"></button>
+          <button class="ladines-main-block__carousel-right"></button>
         </div>
       </section>
-      <section class="v-fall-main-block">
-        <h2 class="v-fall-main-block__header">Мультфильмы</h2>
-        <p class="v-fall-main-block__subtitle">Коллекция лучших мультфильмов для детей и родителей</p>
+      <section class="ladines-main-block">
+        <h2 class="ladines-main-block__header">Мультфильмы</h2>
+        <p class="ladines-main-block__subtitle">Коллекция лучших мультфильмов для детей и родителей</p>
         <div
-          class="v-fall-main-block__container v-fall-main-block__container-carousel--default owl-carousel"
+          class="ladines-main-block__container ladines-main-block__container-carousel--default owl-carousel"
           v-if="cartoons"
         >
           <a
             @click.prevent="openVideo(item.url)"
             v-for="item in cartoons"
             :key="item.id"
-            class="v-fall-main-block__item"
+            class="ladines-main-block__item"
             href="#"
           >
-            <img class="v-fall-main-block__img" :src="item.image" alt />
-            <h3 class="v-fall-main-block__title">{{item.title}}</h3>
-            <p class="v-fall-main-block__content">
-              <span class="v-fall-main-block__elem">{{item.year}}</span>
-              <span class="v-fall-main-block__elem">{{item.category.join(', ')}}</span>
+            <img class="ladines-main-block__img" :src="item.image" alt />
+            <h3 class="ladines-main-block__title">{{item.title}}</h3>
+            <p class="ladines-main-block__content">
+              <span class="ladines-main-block__elem">{{item.year}}</span>
+              <span class="ladines-main-block__elem">{{item.category.join(', ')}}</span>
             </p>
           </a>
         </div>
       </section>
-      <section class="v-fall-main-block">
-        <h2 class="v-fall-main-block__header">Новости</h2>
+      <section class="ladines-main-block">
+        <h2 class="ladines-main-block__header">Новости</h2>
         <div
-          class="v-fall-main-block__container v-fall-main-block__container-carousel v-fall-main-block__container-carousel--news owl-carousel"
+          class="ladines-main-block__container ladines-main-block__container-carousel ladines-main-block__container-carousel--news owl-carousel"
           v-if="news"
         >
           <a
             @click.prevent="openNews(item.url)"
             v-for="item of news"
             :key="item.id"
-            class="v-fall-main-block__item v-fall-main-block__item--lg"
+            class="ladines-main-block__item ladines-main-block__item--lg"
             href="#"
           >
-            <img class="v-fall-main-block__img" :src="item.image" alt />
-            <p class="v-fall-main-block__text">{{item.title}}</p>
+            <img class="ladines-main-block__img" :src="item.image" alt />
+            <p class="ladines-main-block__text">{{item.title}}</p>
           </a>
         </div>
       </section>
@@ -128,28 +128,28 @@ export default {
     };
   },
   mounted() {
-    $(".v-fall-main-slider").owlCarousel({
+    $(".ladines-main-slider").owlCarousel({
       center: true,
       items: 2,
       loop: true,
       margin: 10,
       autoWidth: true
     });
-    $(".v-fall-main-slide__next").click(function() {
-      $(".v-fall-main-slider").trigger("next.owl.carousel", [300]);
+    $(".ladines-main-slide__next").click(function() {
+      $(".ladines-main-slider").trigger("next.owl.carousel", [300]);
     });
-    $(".v-fall-main-slide__prev").click(function() {
-      $(".v-fall-main-slider").trigger("prev.owl.carousel", [300]);
+    $(".ladines-main-slide__prev").click(function() {
+      $(".ladines-main-slider").trigger("prev.owl.carousel", [300]);
     });
 
-    $(".v-fall-main-block__container-carousel").owlCarousel({
+    $(".ladines-main-block__container-carousel").owlCarousel({
       items: 4,
       loop: true,
       margin: 26,
       autoWidth: true
     });
 
-    $(".v-fall-main-block__container-carousel--default").owlCarousel({
+    $(".ladines-main-block__container-carousel--default").owlCarousel({
       items: 6,
       loop: true,
       margin: 17,
@@ -159,13 +159,13 @@ export default {
       autoplayHoverPause: true
     });
 
-    $(".v-fall-main-block__carousel-right").click(function() {
-      $(".v-fall-main-block__container-carousel").trigger("next.owl.carousel", [
+    $(".ladines-main-block__carousel-right").click(function() {
+      $(".ladines-main-block__container-carousel").trigger("next.owl.carousel", [
         300
       ]);
     });
-    $(".v-fall-main-block__carousel-left").click(function() {
-      $(".v-fall-main-block__container-carousel").trigger("prev.owl.carousel", [
+    $(".ladines-main-block__carousel-left").click(function() {
+      $(".ladines-main-block__container-carousel").trigger("prev.owl.carousel", [
         300
       ]);
     });
@@ -193,7 +193,7 @@ export default {
 </script>
 
 <style lang="scss">
-.v-fall-main {
+.ladines-main {
   &-slide {
     &__prev {
       margin-left: 80px;
@@ -254,7 +254,7 @@ export default {
     }
   }
 }
-.v-fall-main-block__container-carousel > span {
+.ladines-main-block__container-carousel > span {
   position: absolute;
   top: 50%;
   left: 0;
@@ -269,40 +269,40 @@ export default {
   display: flex !important;
 }
 
-.v-fall-main-block__img {
+.ladines-main-block__img {
   width: 100%;
   height: auto;
 }
 
-.v-fall-main-block__container {
+.ladines-main-block__container {
   width: 95%;
 }
-.v-fall-main-slider.owl-carousel .owl-item img {
+.ladines-main-slider.owl-carousel .owl-item img {
   height: 100%;
   min-width: 1330px;
 }
 
-.v-fall-main-slide {
+.ladines-main-slide {
   height: 479px;
 }
 
-.v-fall-main-block__container-carousel {
-  .v-fall-main-block__item--lg .v-fall-main-block__img {
+.ladines-main-block__container-carousel {
+  .ladines-main-block__item--lg .ladines-main-block__img {
     height: 400px;
   }
 }
 
-.v-fall-main-block__container-carousel--news {
-  .v-fall-main-block__item--lg .v-fall-main-block__img {
+.ladines-main-block__container-carousel--news {
+  .ladines-main-block__item--lg .ladines-main-block__img {
     width: auto;
     height: 284px;
   }
 }
 
-.v-fall-main-block__item--lg {
+.ladines-main-block__item--lg {
   overflow: hidden;
 
-  .v-fall-main-block__img {
+  .ladines-main-block__img {
     width: auto;
   }
 }

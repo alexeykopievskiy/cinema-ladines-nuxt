@@ -1,7 +1,7 @@
 <template>
   <div>
-    <footer class="v-fall-footer grid">
-      <div class="v-fall__container grid grid-v-center grid-v-between">
+    <footer class="ladines-footer grid">
+      <div class="ladines__container grid grid-v-center grid-v-between">
         <Logo />
         <Navbar v-bind:menu="bottomMenu" />
         <Form />

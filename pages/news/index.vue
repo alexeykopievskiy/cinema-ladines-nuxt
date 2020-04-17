@@ -1,23 +1,23 @@
 <template>
-  <main class="v-fall-main v-fall-main--page-news">
-    <div class="v-fall__container v-fall__container--white v-fall__container--main">
-      <section class="v-fall-main-block grid grid-column">
-        <h2 class="v-fall-main-block__header">Новости</h2>
-        <div class="v-fall-main-block__container grid grid-wrap">
+  <main class="ladines-main ladines-main--page-news">
+    <div class="ladines__container ladines__container--white ladines__container--main">
+      <section class="ladines-main-block grid grid-column">
+        <h2 class="ladines-main-block__header">Новости</h2>
+        <div class="ladines-main-block__container grid grid-wrap">
           <a
             href="#"
             @click.prevent="openNews(item.url)"
             v-for="item of news"
             :key="item.id"
-            class="v-fall-main-block__item v-fall-main-block__item--lg"
+            class="ladines-main-block__item ladines-main-block__item--lg"
           >
-            <img class="v-fall-main-block__img" :src="item.image" alt />
-            <p class="v-fall-main-block__text">{{item.title}}</p>
+            <img class="ladines-main-block__img" :src="item.image" alt />
+            <p class="ladines-main-block__text">{{item.title}}</p>
           </a>
         </div>
         <button
           v-if="loadBtn"
-          class="v-fall-main-block__btn btn btn-disabled"
+          class="ladines-main-block__btn btn btn-disabled"
           @click="loadMore()"
           type="button"
         >Загрузить еще</button>
@@ -52,7 +52,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "V-fall - лучшие фильмы в формате HD"
+          content: "ladines - лучшие фильмы в формате HD"
         }
       ]
     };
@@ -83,8 +83,8 @@ export default {
 </script>
 
 <style lang="scss">
-.v-fall-main--page-news {
-  .v-fall-main-block__item--lg .v-fall-main-block__img {
+.ladines-main--page-news {
+  .ladines-main-block__item--lg .ladines-main-block__img {
     width: 100%;
     height: auto;
   }
